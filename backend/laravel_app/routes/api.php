@@ -1,15 +1,21 @@
 <?php
 
-use App\Http\Controllers\RankingListController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GameController;
+// use App\Http\Controllers\RankingListController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RouletteResultController;
+// use App\Http\Controllers\RouletteResultController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+// Route::post('/rouletteresult', [RouletteResultController::class, 'index']);
+// Route::post('/rankinglist', [RankingListController::class, 'index']);
 
-Route::post('/rouletteresult', [RouletteResultController::class, 'index']);
-
-Route::post('/rankinglist', [RankingListController::class, 'index']);
+Route::get('/', [GameController::class, 'start_time']);
+Route::post('/enter', [GameController::class, 'enter']);
+Route::get('/user_all', [GameController::class, 'user_all']);
+Route::post('/roulette_result', [GameController::class, 'roulette_result']);
+Route::post('/state', [GameController::class, 'state']);
