@@ -19,6 +19,8 @@ class GameController extends Controller
         ]);
     }
 
+    function 
+
     // function index(){
     //     $active_player = Active_player::where('is_guest', false)->get();
     //     $roulette_result = Roulette_result::all(); //場所
