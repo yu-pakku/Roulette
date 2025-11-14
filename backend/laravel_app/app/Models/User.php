@@ -19,7 +19,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'sns_id',
-        'stake'
+        'stake',
+        'bet_place',
+        'id'
     ];
 
     /**

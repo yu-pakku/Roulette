@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->bigInteger('sns_id');
-            $table->integer('stake');
+            $table->json('stake')->nullable();
+            $table->integer('bet_place')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

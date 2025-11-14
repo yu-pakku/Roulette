@@ -18,4 +18,4 @@ Route::get('/start_time', [GameController::class, 'start_time']);
 Route::post('/enter', [GameController::class, 'enter']);
 Route::get('/user_all', [GameController::class, 'user_all']);
 Route::post('/roulette_result', [GameController::class, 'roulette_result']);
-Route::post('/state', [GameController::class, 'state']);
+Route::post('/stake', [GameController::class, 'state']);
